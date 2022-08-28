@@ -16,7 +16,7 @@ namespace Users_Client
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string url = "http://192.168.1.2:3000/user/input";
+            string url = "http://"+ DataSaver.address + "/user/input";
             var wb = new WebClient();
             var user = new Input(textBox1.Text, textBox2.Text);
             string inp = JsonConvert.SerializeObject(user);
@@ -37,6 +37,12 @@ namespace Users_Client
                 label1.Text = resp2.message;
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSaver.address = textBox3.Text;
+            DataSaver.printer_address = textBox4.Text;
         }
     }
 

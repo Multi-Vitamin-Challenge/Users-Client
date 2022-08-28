@@ -34,7 +34,7 @@ namespace Users_Client
             {
                 return;
             }
-            string url = "http://192.168.1.2:3000/questions/get";
+            string url = "http://"+ DataSaver.address + "/questions/get";
             var wb = new WebClient();
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
             keyValuePairs.Add("team_code", textBox1.Text);

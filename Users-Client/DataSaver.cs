@@ -10,5 +10,8 @@ namespace Users_Client
     {
         public static string username { set; get; }
         public static string password { set; get; }
+
+        public static string address { set; get; }
+        public static string printer_address { set; get; }
     }
 }

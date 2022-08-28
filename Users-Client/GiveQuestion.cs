@@ -21,7 +21,7 @@ namespace Users_Client
         {
             InitializeComponent();
             dataGridView1.DataSource = question_types;
-            string url = "http://192.168.1.2:5000/structure";
+            string url = "http://"+DataSaver.printer_address+"/structure";
             var wb = new WebClient();
             var resp = wb.DownloadString(url);
             var resp2 = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(resp);
@@ -47,7 +47,7 @@ namespace Users_Client
                 {
                     return;
                 }
-                string url = "http://192.168.1.2:3000/questions/give";
+                string url = "http://"+ DataSaver.address +"/questions/give";
                 var wb = new WebClient();
                 Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
                 keyValuePairs.Add("team_code", textBox1.Text);
