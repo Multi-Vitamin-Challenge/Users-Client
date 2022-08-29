@@ -34,7 +34,8 @@ namespace Users_Client
             {
                 return;
             }
-            string url = "http://"+ DataSaver.address+"/ questions/score";
+
+            string url = "http://"+ DataSaver.address+"/questions/score";
             var wb = new WebClient();
             Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
             keyValuePairs.Add("team_code", textBox1.Text);
